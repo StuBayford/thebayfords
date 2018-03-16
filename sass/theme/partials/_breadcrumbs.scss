@@ -1,0 +1,12 @@
+.breadcrumbs {
+	color: $gray-300;
+	font-family: $font-family-sans-serif-bold;
+	text-transform: $headings-text-transform;
+	text-align: right;
+	margin: auto 1rem;
+
+	a {
+		color: inherit;
+		font-family: inherit;
+	}
+}

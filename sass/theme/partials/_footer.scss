@@ -1,0 +1,16 @@
+.footer {
+	position: relative;
+	padding: 3rem;
+	text-align: center;
+	color: $gray-600;
+	font-family: 'Lato';
+
+	.logo {
+		margin: 2rem auto;
+		padding: 0;
+	}
+
+	a {
+		font-family: 'Lato';
+	}
+}

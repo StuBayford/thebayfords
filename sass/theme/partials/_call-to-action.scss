@@ -1,0 +1,23 @@
+.cta {
+	width:	100%;
+	padding: 1.5rem;
+	background-color: $primary;
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	margin: 1rem auto;
+
+	.cta-text {
+		margin: 0;
+		padding: 0.5rem 1rem;
+		display: flex;
+		align-items: center;
+		color: $light;
+	}
+
+	.cta-btn {
+		display: flex;
+		margin: 0.5rem 1rem;
+	}
+}

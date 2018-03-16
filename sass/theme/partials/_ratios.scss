@@ -1,0 +1,7 @@
+@each $ratio, $percentage in $ratios {
+	.ratio-#{$ratio}:before {
+		content: "";
+		display: block;
+		padding-top: #{$percentage};
+	}
+}

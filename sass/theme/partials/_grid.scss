@@ -1,0 +1,7 @@
+.row {
+  justify-content: $grid-justify-content;
+}
+
+[class^="col"] {
+	text-align: $grid-text-align;
+}

@@ -1,0 +1,193 @@
+// Use this file to overwrite the basic Bootstrap variables and add your own variables
+// To overwrite a Bootstrap variable you don´t have to touch the Bootstrap folder. 
+// Just copy a variable from src/sass/bootstrap4/_variables.scss, paste it here and edit the value.
+
+
+// Table of Contents
+//
+// Color system
+// Options
+// Spacing
+// Body
+// Links
+// Grid breakpoints
+// Grid containers
+// Grid columns
+// Fonts
+// Components
+// Tables
+// Buttons
+// Forms
+// Dropdowns
+// Z-index master list
+// Navs
+// Navbar
+// Pagination
+// Jumbotron
+// Form states and alerts
+// Cards
+// Tooltips
+// Popovers
+// Badges
+// Modals
+// Alerts
+// Progress bars
+// List group
+// Image thumbnails
+// Figures
+// Breadcrumbs
+// Carousel
+// Close
+// Code
+
+
+// Color system
+//Existing Colors
+$white:       							#ffffff;
+
+//New Colors
+$light-brown:								#927763;
+$dark-green:								#216B59;
+
+$colors: (
+  "light-brown": 						$light-brown,
+  "dark-green":							$dark-green,
+);
+
+//Altered Colors
+$green:											#59a761;
+$yellow:										#e8b12e;
+$gray-100:									#fbfbfb;
+$gray-500:									#bec0a3;
+$gray-800:									#2e342e;
+$gray-900:									#262626;
+
+$grays: (
+);
+
+$colors-transparency: (
+	10: 0.1,
+	20: 0.2,
+	30: 0.3,
+	40: 0.4,
+	50: 0.5,
+	60: 0.6,
+	70: 0.7,
+	80: 0.8,
+	90: 0.9,
+	100: 1
+);
+
+$primary:										$yellow;
+$secondary:									$dark-green;
+$tertiary:									$gray-500;
+$quarternary:								$light-brown;
+$quinary:										$green;
+$dark:						          $gray-800;
+
+$theme-colors: (
+	"tertiary":								$tertiary,
+	"quarternary":						$quarternary,
+	"quinary":								$quinary,
+);
+
+//Spacing
+$spacer:										1rem;
+
+
+//Body
+$body-color:								$gray-800;
+
+
+//Components
+$border-width:							2px;
+
+
+//Fonts
+$font-family-sans-serif: 		'Josefin Sans', sans-serif;
+$font-family-serif:					'Maitree', serif;
+$font-family-icons:		 			'FontAwesome';
+$font-family-base:          'Nunito Sans', sans-serif;
+
+$headings-font-family:			$font-family-sans-serif;
+$headings-text-transform:		uppercase;
+$headings-text-align:				center;
+
+$font-size-base:            1rem;
+
+$h1-font-size:              $font-size-base * 2;
+$h2-font-size:              $font-size-base * 1.5;
+$h3-font-size:              $font-size-base * 1.25;
+$h4-font-size:              $font-size-base * 1.2;
+/*$h5-font-size:              $font-size-base * 1.25 !default;*/
+/*$h6-font-size:							$font-size-base !default;*/
+
+$lead-font-size:						($font-size-base * 1.2);
+
+$link-font-family:					$font-family-sans-serif;
+
+
+//Buttons
+$input-btn-padding-x:				2rem;
+$btn-text-transform:				none;
+$btn-font-size:							$font-size-base * 1.2;
+$btn-icon:									'\f0a9';
+
+
+//Navs
+$navbar-padding-y:					$spacer * 0.75;
+$navbar-scrolling-padding:	$spacer * 1;
+$navbar-top-collapse-padding: $spacer * 0.5;
+$navbar-initial-opacity:		0.8;
+$navbar-text-transform:			none;
+$navbar-font-size:					$font-size-base * 1;
+$navbar-brand-font-size:		$navbar-font-size;
+$navbar-dark-color:         $white;
+$navbar-dark-active-color:  $primary;
+$navbar-dark-bg-color:			$secondary;
+$navbar-shrink-factor:			0.25;
+
+
+//Cards
+$card-border-color:					transparent;
+$card-cap-bg:								transparent;
+
+
+//Links
+$social-link-color:					$green;
+
+
+//Grid
+$grid-justify-content:			center;
+$grid-text-align:						center;
+
+
+//Ratios
+$ratios: (
+	"1-2":										200%,
+	"1-1":										100%,
+	"4-3":										75%,
+	"16-9":										56.25%,
+	"2-1":										50%,
+	"3-4":										133%
+);
+
+
+//Forms
+$form-bg-color:							$white;
+$input-bg:                  $gray-100;
+$input-border-color:				$gray-100;
+
+
+//Cards
+$card-border-width:         0;
+$card-border-radius:        0;
+$card-border-color:         rgba($black, .125) !default;
+
+$card-deck-margin:					0;
+
+
+//Options
+$enable-transparency:				true;
+$enable-rounded:          	true;
+/*$enable-gradients:					true;*/

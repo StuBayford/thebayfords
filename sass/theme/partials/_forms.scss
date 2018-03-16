@@ -1,0 +1,42 @@
+.success:after {
+	content: '\f058';
+	font-family: 'FontAwesome';
+	font-weight: 400;
+	font-size: 2rem;
+	color: $success;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: -10%;
+}
+
+.error:after {
+	content: '\f057';
+	font-family: 'FontAwesome';
+	font-weight: 400;
+	font-size: 2rem;
+	color: $danger;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: -10%;
+}
+
+.message {
+	display: none;
+	position: fixed;
+	bottom: 1rem;
+	left: 0;
+	right: 0;
+	text-align: center;
+	margin: auto;
+	z-index: 10;
+
+	&.show {
+		display: block;
+	}
+}
+
+.form-control::placeholder {
+	text-transform: capitalize;
+}

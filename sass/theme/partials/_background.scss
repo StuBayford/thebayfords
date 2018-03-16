@@ -1,0 +1,22 @@
+@each $color, $value in $colors {
+  @include bg-variant(".bg-#{$color}", $value);
+}
+
+@each $color, $value in $theme-colors {
+  @include bg-gradient-variant(".bg-gradient-#{$color}", $value);
+}
+
+@if $enable-transparency {
+  @each $color, $value in $theme-colors {
+  	@each $transparency, $level in $colors-transparency {
+    	@include bg-transparency-variant(".bg-#{$color}-#{$transparency}", $value, $level);
+    }
+  }
+}
+
+@each $color, $value in $theme-colors {
+	@each $transparency, $level in $colors-transparency {
+  	@include bg-transparency-gradient-variant(".bg-gradient-#{$color}-#{$transparency}", $value, $level);
+    @include bg-transparency-gradient-variant(".bg-gradient-#{$color}-#{$transparency}-inverse", $value, $level, 180);
+  }
+}

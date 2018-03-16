@@ -1,0 +1,11 @@
+@mixin bg-transparency-variant($parent, $color, $level) {
+  #{$parent} {
+    background: rgba($color, $level) !important;
+  }
+}
+
+@mixin bg-transparency-gradient-variant($parent, $color, $level, $direction: 0) {
+  #{$parent} {
+    background: linear-gradient(#{$direction}deg, rgba($color, $level), transparent) !important;
+  }
+}

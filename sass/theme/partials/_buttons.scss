@@ -1,0 +1,29 @@
+.btn {
+	text-transform: $btn-text-transform;
+	@include button-size($btn-padding-y, $btn-padding-x, $btn-font-size, $btn-line-height, $btn-border-radius);
+	transition: all 0.5s ease 0s, padding 0.25s ease;
+}
+
+.btn-margin {
+	@extend .btn;
+	margin: 1rem;
+}
+
+.icon {
+	&:after {
+		content: $btn-icon;
+		font-family: 'FontAwesome';
+		font-weight: 400;
+		margin-left: 1rem;
+	}
+}
+
+@each $color, $value in $colors {
+  .btn-outline-#{$color} {
+    @if $color == "light" {
+      @include button-outline-variant($value, $gray-900);
+    } @else {
+      @include button-outline-variant($value, $white);
+    }
+  }
+}

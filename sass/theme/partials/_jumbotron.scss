@@ -1,0 +1,91 @@
+.jumbotron {
+	height:	80vh;
+	background-color: rgba($dark, 0.7);
+	background-blend-mode: luminosity;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+	position: relative;
+	margin: 0;
+
+	.jumbotron-inner {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		/*border-top: 1px solid $white;*/
+		padding: 0.5rem 2rem 5rem 2rem;
+		color: $white;
+
+		&:after {
+			content: '';
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			background: linear-gradient(0deg, $secondary, transparent);
+			mix-blend-mode: multiply;
+		}
+
+		.jumbotron-content {
+			position: relative;
+			z-index: 5;
+		}
+	}
+
+	.jumbotron-footer {
+		color: $light;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		margin: 2rem auto;
+		justify-content: center;
+		text-align: center;
+	}
+}
+
+.home {
+	.jumbotron {
+
+		.jumbotron-footer {
+
+			.fa-chevron-circle-down {
+				position: relative;
+				top: 0;
+				animation: arrow-movement 2s ease-in-out infinite;
+				transition: all .2s ease-in-out;
+				transform: rotateY(0);
+
+				&:hover {
+					animation: none;
+					transform: scale(1.1);
+				}
+			}
+
+			.lead {
+			}
+		}
+	}
+}
+
+// Animation
+@keyframes arrow-movement {
+    0% { 
+        opacity: 0.2;
+    }
+    50% {
+    	opacity: 1;
+    }
+    75% {
+    	/*transform: rotateY(0);*/
+    }
+    88% {
+    	/*transform: rotateY(90deg);*/
+    }
+    100% {
+        opacity: 0.2;
+    }
+}
