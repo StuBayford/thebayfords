@@ -22,11 +22,23 @@ $instagram = get_theme_mod( 'instagram' );
 		<div class="row">
 			<div class="col-md-12">
 				<footer id="colophon" class="site-footer">
-					<div id="social">
+					<div id="social" class="text-center">
+						<!-- Facebook -->
+            <?php if ( $facebook ): ?>
+   			   		<a class="social-icon" href="https://www.facebook.co.uk/<?php echo $facebook; ?>" target="_blank">
+                <i class="fab fa-facebook fa-2x"></i>
+							</a>
+            <?php endif; ?>
 						<!-- Twitter -->
             <?php if ( $twitter ): ?>
-   			   		<a href="https://www.twitter.co.uk/<?php echo $twitter; ?>" target="_blank">
-                <i class="fab fa-twitter fa-3x" data-fa-transform="shrink-8" data-fa-mask="fas fa-circle"></i>
+   			   		<a class="social-icon" href="https://www.twitter.co.uk/<?php echo $twitter; ?>" target="_blank">
+                <i class="fab fa-twitter-square fa-2x"></i>
+							</a>
+            <?php endif; ?>
+            <!-- Instagram -->
+            <?php if ( $instagram ): ?>
+   			   		<a class="social-icon" href="https://www.instagram.co.uk/<?php echo $instagram; ?>" target="_blank">
+                <i class="fab fa-instagram fa-2x"></i>
 							</a>
             <?php endif; ?>
 					</div>

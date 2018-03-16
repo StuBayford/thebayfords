@@ -1,13 +1,31 @@
 .causes {
+	background-color: $primary;
+	background-image: url('../img/brazil-map-outline.svg');
+	background-size: cover;
+	background-attachment: fixed;
+	background-position: left;
+	background-repeat: no-repeat;
+
 	.causes-left {
-		background-image: url('../img/brazil-map-outline.svg');
-		background-size: cover;
-		background-attachment: fixed;
-		background-position: left;
-		background-repeat: no-repeat;
+		color: $white;
+		/*background: inherit;*/
+			/*-webkit-background-clip: text;*/
+							/*background-clip: text;*/
+		/*color: transparent;*/
+		/*filter: invert(1) grayscale(1) contrast(9);*/
 	}
 
 	.causes-right {
 
 	}
+}
+
+.project-image {
+	display: block;
+	margin-top: 1rem;
+	width: 100%;
+	padding-top: 56%;
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
 }

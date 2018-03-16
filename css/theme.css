@@ -13091,6 +13091,12 @@ button.bg-dark-green:focus {
   right: 0;
   margin-right: 0.25rem; }
 
+.social-icon:hover {
+  text-decoration: none; }
+
+.social-icon svg {
+  margin: 0.5rem 0.25rem; }
+
 .success:after {
   content: '\f058';
   font-family: 'FontAwesome';
@@ -13205,12 +13211,29 @@ button.bg-dark-green:focus {
 .wpcf7 textarea::placeholder, .wpcf7 .wpcf7-validation-errors::placeholder {
   text-transform: capitalize; }
 
-.causes .causes-left {
+.causes {
+  background-color: #e8b12e;
   background-image: url("../img/brazil-map-outline.svg");
   background-size: cover;
   background-attachment: fixed;
   background-position: left;
   background-repeat: no-repeat; }
+  .causes .causes-left {
+    color: #ffffff;
+    /*background: inherit;*/
+    /*-webkit-background-clip: text;*/
+    /*background-clip: text;*/
+    /*color: transparent;*/
+    /*filter: invert(1) grayscale(1) contrast(9);*/ }
+
+.project-image {
+  display: block;
+  margin-top: 1rem;
+  width: 100%;
+  padding-top: 56%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center; }
 
 .logo-container {
   padding: 1rem;

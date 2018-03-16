@@ -69,7 +69,6 @@ class Custom_Theme_Customizer {
 			'default'           => false,
 			// 'sanitize_callback' => array( $this, 'sanitize_image' )
 		) );
-
 		$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'banner_image', array(
 			'label'       => esc_html__( 'Upload a banner image', 'understrap' ),
 			// 'description' => esc_html__( 'Check this on to automatically insert the featured image before the post content.', 'understrap' ),
@@ -83,7 +82,6 @@ class Custom_Theme_Customizer {
 		$wp_customize->add_setting( 'organisation_logo_1', array(
 			'default'           => false,
 		) );
-
 		$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'organisation_logo_1', array(
 			'label'       => esc_html__( 'Upload an organisation logo', 'understrap' ),
 			// 'description' => esc_html__( 'Check this on to automatically insert the featured image before the post content.', 'understrap' ),
@@ -91,9 +89,7 @@ class Custom_Theme_Customizer {
 			'settings'    => 'organisation_logo_1',
 			'priority'    => 11
 		) ) );
-
 		$wp_customize->add_setting( 'organisation_link_1', array() );
-
 		$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'organisation_link_1', array(
 			'label'       => esc_html__( 'Set the organisation url', 'understrap' ),
 			'section'     => 'home_options',
@@ -106,7 +102,6 @@ class Custom_Theme_Customizer {
 		$wp_customize->add_setting( 'organisation_logo_2', array(
 			'default'           => false,
 		) );
-
 		$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'organisation_logo_2', array(
 			'label'       => esc_html__( 'Upload an organisation logo', 'understrap' ),
 			// 'description' => esc_html__( 'Check this on to automatically insert the featured image before the post content.', 'understrap' ),
@@ -114,9 +109,7 @@ class Custom_Theme_Customizer {
 			'settings'    => 'organisation_logo_2',
 			'priority'    => 11
 		) ) );
-
 		$wp_customize->add_setting( 'organisation_link_2', array() );
-
 		$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'organisation_link_2', array(
 			'label'       => esc_html__( 'Set the organisation url', 'understrap' ),
 			'section'     => 'home_options',
@@ -129,7 +122,6 @@ class Custom_Theme_Customizer {
 		$wp_customize->add_setting( 'organisation_logo_3', array(
 			'default'           => false,
 		) );
-
 		$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'organisation_logo_3', array(
 			'label'       => esc_html__( 'Upload an organisation logo', 'understrap' ),
 			// 'description' => esc_html__( 'Check this on to automatically insert the featured image before the post content.', 'understrap' ),
@@ -137,13 +129,21 @@ class Custom_Theme_Customizer {
 			'settings'    => 'organisation_logo_3',
 			'priority'    => 11
 		) ) );
-
 		$wp_customize->add_setting( 'organisation_link_3', array() );
-
 		$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'organisation_link_3', array(
 			'label'       => esc_html__( 'Set the organisation url', 'understrap' ),
 			'section'     => 'home_options',
 			'type'				=> 'url',
+			'priority'    => 11
+		) ) );
+
+
+		/* Add causes textarea */
+		$wp_customize->add_setting( 'causes', array() );
+		$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'causes', array(
+			'label'       => esc_html__( 'Edit the text for causes', 'understrap' ),
+			'section'     => 'home_options',
+			'type'				=> 'textarea',
 			'priority'    => 11
 		) ) );
 	}

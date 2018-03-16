@@ -1,59 +1,9 @@
-.centralise {
-	position: absolute;
-	left: 0;
-	right: 0;
-	top: 0;
-	bottom: 0;
-	margin: auto;
-}
-
-.pipe {
-	margin: 0 1rem;
-	display: none;
-}
-
-@include media-breakpoint-up(sm) {
-	.pipe {
-		display: block;
+.social-icon {
+	&:hover {
+		text-decoration: none;
 	}
-}
 
-.no-wrap {
-	white-space: nowrap;
-}
-
-.two-text {
-	@extend .no-wrap;
-	justify-content: center;
-	margin-bottom: $paragraph-margin-bottom;
-}
-
-.content {
-	margin: map-get($spacers, 3);
-	padding: map-get($spacers, 5);
-	background-color: $gray-200;
-	background-image: url('../../img/cobbles.jpg');
-	background-repeat: no-repeat;
-	background-size: 100% auto;
-	background-clip: border-box;
-	background-position: bottom;
-}
-
-.text {
-	margin: 1rem auto;
-}
-
-.social-icons {
-	a {
-		color: $social-link-color;
-
-		&:hover {
-			color: darken($social-link-color, 15%);
-			text-decoration: none;
-		}
-
-		svg {
-			margin: 0.5rem 0.25rem;
-		}
+	svg {
+		margin: 0.5rem 0.25rem;
 	}
 }

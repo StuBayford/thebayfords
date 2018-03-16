@@ -18,11 +18,12 @@ $organisation_logo_2 = get_theme_mod( 'organisation_logo_2' );
 $organisation_link_2 = get_theme_mod( 'organisation_link_2' );
 $organisation_logo_3 = get_theme_mod( 'organisation_logo_3' );
 $organisation_link_3 = get_theme_mod( 'organisation_link_3' );
+$causes = get_theme_mod( 'causes' );
 ?>
 
 <!-- BANNER -->
 <?php if($banner_image): ?>
-	<div class="jumbotron jumbotron-fluid" style="background-image: url('<?=$banner_image; ?>')">
+	<div class="jumbotron jumbotron-fluid" style="background-image: url('<?php echo $banner_image; ?>')">
   	<div class="jumbotron-inner">
   		<div class="container">
 	  		<div class="jumbotron-content">
@@ -99,13 +100,21 @@ $organisation_link_3 = get_theme_mod( 'organisation_link_3' );
 
 
 <!-- CAUSES -->
-<div class="causes bg-primary">
-	<div class="container">
+<div class="causes">
+	<div class="container py-3">
 		<div class="row justify-content-center">
-			<div class="causes-left col-md-7">
-				
+			<h2 class="col text-light text-center pt-3">Cause</h2>
+		</div>
+		<div class="row justify-content-center">
+			<div class="causes-left col-md-7 my-3">
+				<?php echo $causes ?>
 			</div>
-			<div class="causes-right col-md-5">
+			<div class="causes-right col-md-5 p-3">
+				<div class="bg-white p-3">
+					<h3 class="text-center">Projects</h3>
+					<a href="http://revive-international.org/" class="project-image" style="background-image: url('<?php echo get_template_directory_uri(); ?>/img/revive-logo.png')"></a>
+					<a href="http://withopenarms.ch/en/" class="project-image" style="background-image: url('<?php echo get_template_directory_uri(); ?>/img/withopenarms-logo.png')"></a>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -129,42 +138,44 @@ if($posts): ?>
 
 	<div class="bg-secondary">
 		<div class="container">
-			<div class="card-deck row py-5">
+			<div class="row py-5">
+				<div class="card-deck">
 
-				<div class="col-md-4 mt-5">
-			    <h2 class="text-light icon">Our latest news</h2>
-		  	</div>
-				
-				<?php foreach ($posts as $post):
-					setup_postdata( $post );
+					<div class="col-md-4 mt-5">
+				    <h2 class="text-light icon">Our latest news</h2>
+			  	</div>
+					
+					<?php foreach ($posts as $post):
+						setup_postdata( $post );
 
-					$post_id = get_the_ID();
-					$post_slug = $post->post_name;
-					$post_url = get_permalink($post_id);
-					$post_title = get_the_title($post_id);
-					$post_excerpt = get_the_excerpt($post_id);
-					$post_image_url = get_the_post_thumbnail_url($post_id, 'medium');
-					$post_date = get_the_date('jS F y', $post_id); ?>
+						$post_id = get_the_ID();
+						$post_slug = $post->post_name;
+						$post_url = get_permalink($post_id);
+						$post_title = get_the_title($post_id);
+						$post_excerpt = get_the_excerpt($post_id);
+						$post_image_url = get_the_post_thumbnail_url($post_id, 'medium');
+						$post_date = get_the_date('jS F y', $post_id); ?>
 
-					<div class="col-md-4 py-3">
-		      	<div class="card">
-		      		<?php if ($post_image_url): ?>
-			      		<div class="card-img-top" style="background-image: url('<?=$post_image_url; ?>')">
-			      		</div>
-		      		<?php endif; ?>
-					    <div class="card-body">
-					      <h5 class="card-title"><?=$post_title; ?></h5>
-					      <p class="card-text"><?=$post_excerpt; ?></p>
-					    </div>
-					    <div class="card-footer">
-					      <small class="text-muted"><?=$post_date; ?></small>
-					    </div>
-					  </div>
-					</div>
+						<div class="col-md-4 py-3">
+			      	<div class="card">
+			      		<?php if ($post_image_url): ?>
+				      		<div class="card-img-top" style="background-image: url('<?php echo $post_image_url; ?>')">
+				      		</div>
+			      		<?php endif; ?>
+						    <div class="card-body">
+						      <h5 class="card-title"><?php echo $post_title; ?></h5>
+						      <p class="card-text"><?php echo $post_excerpt; ?></p>
+						    </div>
+						    <div class="card-footer">
+						      <small class="text-muted"><?php echo $post_date; ?></small>
+						    </div>
+						  </div>
+						</div>
 
-				<?php endforeach; ?>
-				<?php wp_reset_postdata(); ?>
-				
+					<?php endforeach; ?>
+					<?php wp_reset_postdata(); ?>
+					
+				</div>
 			</div>
 		</div>
 	</div>
@@ -176,22 +187,24 @@ if($posts): ?>
 
 <!-- ORGANISATIONS -->
 <div class="organisations bg-white">
-	<div class="container">
+	<div class="container py-5">
 		<div class="row justify-content-center">
-			<h2>Associated Charities</h2>
+			<h2 class="col text-center">Associated Charities</h2>
+		</div>
+		<div class="row justify-content-center">
 			<div class="logo-container col-sm-3">
-				<a href="<?=$organisation_link_1; ?>">
-					<img class="logo" src="<?=$organisation_logo_1; ?>">
+				<a href="<?php echo $organisation_link_1; ?>">
+					<img class="logo" src="<?php echo $organisation_logo_1; ?>">
 				</a>
 			</div>
 			<div class="logo-container col-sm-3">
-				<a href="<?=$organisation_link_2; ?>">
-					<img class="logo" src="<?=$organisation_logo_2; ?>">
+				<a href="<?php echo $organisation_link_2; ?>">
+					<img class="logo" src="<?php echo $organisation_logo_2; ?>">
 				</a>
 			</div>
 			<div class="logo-container col-sm-3">
-				<a href="<?=$organisation_link_3; ?>">
-					<img class="logo" src="<?=$organisation_logo_3; ?>">
+				<a href="<?php echo $organisation_link_3; ?>">
+					<img class="logo" src="<?php echo $organisation_logo_3; ?>">
 				</a>
 			</div>
 		</div>
